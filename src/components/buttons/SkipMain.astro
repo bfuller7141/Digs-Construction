@@ -1,0 +1,26 @@
+<a href="#main" class="skip-main">Skip to Main Content</a>
+
+<style>
+    .skip-main {
+        position: absolute;
+        top: -60px;
+        left: 0;
+        display: inline-block;
+        max-width: fit-content;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        background-color: var(--red-500);
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .skip-main:focus {
+        top: 12px;
+        left: 12px;
+    }
+</style>

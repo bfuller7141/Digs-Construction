@@ -1,0 +1,39 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import SkipMain from "../components/buttons/SkipMain.astro";
+import Footer from "../components/Footer.astro";
+import NavMainDark from "../components/navigation/NavMain-Dark.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Home"
+            description="This is the home page"
+            keywords="home, page"
+            url="https://digs.construction" 
+        />
+    </head>
+    <body>
+        <SkipMain />
+        <header>
+            <NavMainDark />            
+        </header>
+        <main id="main">
+            <section id="top">
+                <div class="padding-xl-top">
+                    <div class="container">
+                        <div class="wrapper">
+                            <h1 class="title-page txt-center">Thank You <span class="highlight">For</span><br> Your Application</h1>
+                            <p class="body-md txt-center">
+                                We appreciate your interest in joining Digs Construction. Our team is reviewing your application, and we’ll reach out if there’s a good fit. If you have any questions or need to update your application, feel free to contact us at (623) 214-2366.                            </p>
+                            <div class="wrapper-btn btn-center">
+                                <a href="/about" class="btn-primary">About Digs Construction</a>
+                                <a href="/" class="btn-secondary black-btn">Back To Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

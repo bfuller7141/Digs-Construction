@@ -1,0 +1,39 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import SkipMain from "../components/buttons/SkipMain.astro";
+import Footer from "../components/Footer.astro";
+import NavMainDark from "../components/navigation/NavMain-Dark.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+        title="Thank You for Contacting Digs Construction | We’ll Be in Touch Soon"
+        description="Your message has been received! A team member from Digs Construction will reach out shortly. For urgent inquiries, call (623) 214-2366."
+        keywords="thank you for contacting, Digs Construction, construction inquiry received, contractor contact confirmation"
+        url="https://digs.construction/thank-you"
+    />    
+    </head>
+    <body>
+        <SkipMain />
+        <header>
+            <NavMainDark />            
+        </header>
+        <main id="main">
+            <section id="top">
+                <div class="padding-xl-top">
+                    <div class="container">
+                        <div class="wrapper">
+                            <h1 class="title-page txt-center">Thank You <span class="highlight">For</span><br> Your Submission</h1>
+                            <p class="body-md txt-center">
+                                We appreciate you reaching out to Digs Construction. Your message has been received, and our team will get back to you as soon as possible. If your inquiry is urgent, feel free to give us a call at (623) 214-2366.                            </p>
+                            <div class="wrapper-btn btn-center">
+                                <a href="/" class="btn-primary">Back To Site</a>
+                                <a href="/gallery" class="btn-secondary black-btn">Explore Our Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

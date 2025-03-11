@@ -1,0 +1,40 @@
+---
+interface BaseHeadProps {
+  title: string;
+  description: string;
+  keywords: string;
+  image: string;
+  url: string;
+}
+
+const {title, description, keywords, image, url} = Astro.props as BaseHeadProps;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title || "Digs Construction | Los Alamos, New Mexico"}</title>
+<meta name="description" content={description || "Digs Construction | Los Alamos, New Mexico"} />
+<meta name="keywords" content={keywords || "construction, digs construction, los alamos, new mexico, northern new mexico"} />
+
+<link rel="canonical" href={url || "https://digs.construction"} />
+
+<!-- Styles -->
+<link rel="stylesheet" href="/styles/styles.css" />
+<link rel="stylesheet" href="/styles/root.css" />
+<link rel="stylesheet" href="/styles/nav.css" />
+<link rel="stylesheet" href="/styles/foot.css" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<!-- Scripts -->
+<script src="/src/scripts/navScroll.js" defer></script>
+<script src="/src/scripts/serviceSlider.js" defer></script>

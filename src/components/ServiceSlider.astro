@@ -1,0 +1,144 @@
+---
+import ServiceCard from './ServiceCard.astro'
+---
+<div class="slider-container"> 
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slide">
+      <ServiceCard
+        title="Demolition"
+        description="From selective demolition to full-scale teardown, we handle every project with precision and control. Our team specializes in safe material removal, site clearing, and debris management to ensure a smooth transition for new construction. With advanced equipment and strict safety protocols, we minimize disruptions while maximizing efficiency—delivering clean, build-ready sites on time and on budget."
+        image="/images/static/service-demo.webp"
+        alt="Komatsu excavator demolishing and clearing debris from a wooded site with construction workers in the background."
+        link="/gallery#demo"
+      />
+    </div>
+    <div class="slide">
+      <ServiceCard
+        title="Site Work"
+        description="From grading and excavation to land clearing and utility prep, we ensure every site is ready for seamless construction. Our team specializes in precise earthmoving, soil stabilization, and drainage solutions that lay the groundwork for durable, long-lasting structures. With a deep understanding of site conditions and project demands, we deliver efficient, high-quality site preparation that keeps projects moving forward."
+        image="/images/static/service-sitework.webp"
+        alt="Construction crew using heavy machinery to move large rocks and prepare a site for development in a mountainous area."
+        link="/gallery#site-work"
+      />
+    </div>
+    <div class="slide">
+      <ServiceCard
+        title="Infrastructure"
+        description="From roads and bridges to underground utilities, we build the essential systems that support communities and industries. Our team specializes in drainage installation, reinforced concrete structures, and large-scale site improvements with a focus on longevity and performance. With deep expertise in public and private infrastructure, we deliver efficient, high-quality solutions that keep projects on schedule and within scope."
+        image="/images/static/service-infrastructure.webp"
+        alt="A large pipeline installation project with erosion control measures and a reinforced embankment in a rural setting."
+        link="/gallery#infrastructure"
+      />
+    </div>
+    <div class="slide">
+      <ServiceCard
+        title="Paving"
+        description="From asphalt roads to concrete pathways, we deliver smooth, durable surfaces built to withstand heavy use. Our team specializes in precision grading, compaction, and material application to ensure long-lasting performance. Whether it’s a roadway, parking lot, or industrial surface, we bring expert craftsmanship and efficient execution to every paving project—delivering results on time and on budget."
+        image="/images/static/service-paving.webp"
+        alt="Freshly paved residential road leading to a partially constructed house with plywood siding and open framing."
+        link="/gallery#paving"
+      />
+    </div>
+  </div>
+
+  <div class="arrow-wrapper">
+    <button class="arrow left" aria-label="Previous slide">&#9664;</button>
+    <div class="slider-indicator">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <button class="arrow right" aria-label="Next slide">&#9654;</button>
+  </div>
+</div>
+
+
+<style>
+/* Hide Scrollbar */
+.slider {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 0 3rem 5rem;
+  margin-top: 3rem;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 2rem;
+  padding-bottom: 2rem; 
+}
+
+.slide {
+  width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.slider-indicator {
+  display: flex;
+  gap: 0.25rem;
+}
+    
+.bar {
+  width: 1rem;
+  height: 0.5rem;
+  background: var(--red-200);
+  transition: background 0.3s;
+}
+.bar.active {
+  background: var(--red-500);
+}
+
+/* Arrow wrapper and buttons */
+.arrow-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  pointer-events: none; /* allow slider scrolling through clicks on slider */
+}
+.arrow-wrapper button {
+  pointer-events: all; /* but make arrows clickable */
+}
+.arrow.left,
+.arrow.right {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--red-500);
+  transition: color 0.3s ease;
+}
+.arrow.left:hover,
+.arrow.right:hover {
+  color: var(--red-700);
+}
+
+</style>

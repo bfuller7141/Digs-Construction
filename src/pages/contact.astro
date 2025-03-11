@@ -1,0 +1,49 @@
+---
+import ApplicationForm from "../components/ApplicationForm.astro";
+import BaseHead from "../components/BaseHead.astro";
+import SkipMain from "../components/buttons/SkipMain.astro";
+import Footer from "../components/Footer.astro";
+import NavMainDark from "../components/navigation/NavMain-Dark.astro";
+import ProjectForm from "../components/ProjectForm.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+        title="Contact Digs Construction | Get a Quote or Consultation Today"
+        description="Reach out to Digs Construction for quotes, project inquiries, or consultations. Call, email, or fill out our contact form to get started."
+        keywords="contact Digs Construction, construction quotes, general contractor contact, construction consultation, get a construction estimate, construction company near me"
+        url="https://digs.construction/contact"
+    />    
+    </head>
+    <body>
+        <SkipMain />
+        <header>
+            <NavMainDark />
+        </header>
+        <main id="main">
+            <section id="top">
+                <div class="padding-xl-top">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="title-bar">
+                                <div class="divider-bar-short"></div>
+                                <h1 class="title-lg txt-center txt-red no-margin">Contact US</h1>
+                                <div class="divider-bar-short"></div>
+                            </div>
+                            <h2 class="title-page txt-center">Ready To Start Your <span class="highlight">Project</span> With Digs</h2>
+                            <p class="body-md txt-center">
+                                At Digs Construction, we’re ready to bring your project to life with precision, expertise, and efficiency. Whether you need demolition, sitework, or infrastructure development, our team is committed to delivering high-quality results that meet your timeline and budget. Fill out the form below to tell us about your project, and we’ll be in touch to discuss the next steps.
+                            </p>
+                            <ProjectForm />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <Footer />
+    </body>
+</html>

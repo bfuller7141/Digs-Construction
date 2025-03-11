@@ -1,0 +1,191 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import SkipMain from "../components/buttons/SkipMain.astro";
+import NavMain from "../components/navigation/NavMain.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ServiceSlider from "../components/ServiceSlider.astro";
+import Footer from "../components/Footer.astro";
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+        title="Digs Construction | Trusted Contractor for Infrastructure, Paving & Site Work"
+        description="Digs Construction has proudly served Los Alamos since 2005, delivering expert infrastructure, paving, site work, and demolition services. Get in touch today!"
+        keywords="Digs Construction, construction services, infrastructure contractor, paving contractor, site work, demolition services, Los Alamos construction"
+        url="https://digs.construction"
+    />    
+    </head>
+    <body>
+        <SkipMain />
+        <header>
+            <NavMain />            
+        </header>
+        <main id="main">
+            <section id="top" class="section-hero">
+                <div class="padding-hero">
+                    <div class="container">
+                        <div class="wrapper-hero">
+                            <h1 class="title-page txt-white">
+                                Where Expertise Meets <span class="highlight">Execution</span>
+                            </h1>
+                            <p class="txt-white">
+                                <strong>Precision-driven demolition, grading, and civil construction—delivered with skill and commitment.</strong>
+                            </p>
+                            <p class="txt-white">
+                                Since 2005, Digs Construction has provided Los Alamos and White Rock with top-tier heavy civil construction services. As an employee-owned company, we take ownership of every project, ensuring quality, efficiency, and results that stand the test of time.
+                            </p>
+                            <div class="wrapper-btn">
+                                <a href="/contact" class="btn-primary">Start A Project</a>
+                                <a href="/careers" class="btn-secondary">Find A Career</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-service-card">
+                <div class="padding-global">
+                    <div class="container">
+                        <div class="service-card">
+                            <div class="service-card-wrapper">
+                                <h2 class="title-md txt-red txt-center no-margin">Demolition</h2>
+                                <p class="body-md txt-center">
+                                    We handle full and selective demolitions with efficiency and expertise.
+                                </p>
+                            </div>
+                            <div class="divider-vertical"></div>
+                            <div class="service-card-wrapper">
+                                <h2 class="title-md txt-red txt-center no-margin">Infrastructure</h2>
+                                <p class="body-md txt-center">
+                                    Roads, utilities, and foundations engineered for strength and longevity.
+                                </p>
+                            </div>
+                            <div class="divider-vertical"></div>
+                            <div class="service-card-wrapper">
+                                <h2 class="title-md txt-red txt-center no-margin">Site Work</h2>
+                                <p class="body-md txt-center">
+                                    From grading to excavation, we prepare sites for lasting stability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-background">
+                <div class="padding-global">
+                    <div class="container">
+                        <div class="title-bar">
+                            <h2 class="title-md no-margin txt-red">Our Past Work</h2>
+                            <div class="divider-bar"></div>
+                        </div>
+                        <div class="wrapper-grid">
+                            <div class="wrapper">
+                                <img class="img-wide" alt="Komatsu excavator clearing a demolished site with piles of wood, metal, and debris in a wooded area." height="663" width="745" src="/images/gallery/demolition/gallery-demo-1.webp">
+                            </div>
+                            <div class="wrapper">
+                                <img class="img-wide" alt="Excavator placing large concrete blocks to construct a retaining wall under a bright blue sky." height="663" width="745" src="/images/gallery/infrastructure/gallery-infrastructure-7.webp">
+                            </div>
+                            <div class="wrapper">
+                                <img class="img-wide" alt="Newly paved residential road leading to a partially constructed house with plywood siding and open framing." height="663" width="745" src="/images/gallery/paving/gallery-paving-3.webp">
+                            </div>
+                            <div class="wrapper">
+                                <img class="img-wide" alt="Bobcat skid-steer grading a construction site with workers in safety vests preparing the area in front of a commercial building." height="663" width="745" src="/images/gallery/sitework/gallery-sitework-4.webp">
+                            </div>
+                        </div>
+                        <div class="btn-center">
+                            <a href="/gallery" class="btn-text">See Our Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-background-dark">
+                <div class="padding-global">
+                    <div class="container">
+                        <div class="wrapper-col">
+                            <div class="wrapper first">
+                                <div class="title-bar">
+                                    <h2 class="title-md no-margin txt-white">Our Mission</h2>
+                                    <div class="divider-bar white-bar"></div>
+                                </div>
+                                <h3 class="title-section txt-white">Our Commitment<br>To Quality & Safety</h3>
+                                <p class="body-md txt-white">
+                                    We believe the foundation of every successful project is collaboration, precision, and accountability. As an employee-owned company, we take pride in fostering strong partnerships with owners, architects, designers, engineers, and suppliers.
+                                </p>
+                                <ul>
+                                    <li class="body-md txt-white">
+                                        <strong>Safety:</strong> We prioritize the well-being of our team, partners, and community by following strict safety protocols and industry best 
+                                    </li>
+                                    <li class="body-md txt-white">
+                                        <strong>Quality:</strong> We never cut corners. Precision, durability, and craftsmanship are at the core of everything we build.
+                                    </li>
+                                    <li class="body-md txt-white">
+                                        <strong>Collaboration:</strong> Great projects don’t happen in isolation. We work closely with owners, architects, and engineers to ensure seamless execution and lasting results.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wrapper">
+                                <img class="img" alt="Close-up of a yellow Volvo construction compactor with the Digs Construction logo, parked on a dirt site with mountains and a sunset in the background." height="730" width="730" src="/images/static/tractor.webp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-relative">
+                <div class="padding-global">
+                    <div class="container">
+                        <div class="wrapper-col">
+                            <div class="wrapper">
+                                <img class="img" alt="White Kenworth dump truck with a black trailer parked on a gravel lot, surrounded by pine trees under a cloudy sky." height="730" width="730" src="/images/static/truck.webp">
+                            </div>
+                            <div class="wrapper first">
+                                <h2 class="title-section">Employee Owned <br>Employee <span class="highlight">Opperated</span></h2>
+                                <p class="body-md">
+                                    At Digs Construction, every team member has a stake in our success. As an employee-owned company, we don’t just work here—we own the results. This means every project is handled with pride, accountability, and precision, ensuring the highest quality outcomes for our clients. When you work with Digs, you’re partnering with skilled professionals who care as much about the end result as you do.
+                                </p>
+                                <div class="wrapper-btn">
+                                    <a href="/contact" class="btn-primary">Start A Project</a>
+                                    <a href="/careers" class="btn-secondary black-btn">Find A Career</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="bg-concrete" src="/images/backgrounds/bg_concrete.webp" alt="" role="presentation">
+            </section>
+
+            <section>
+                <div class="padding-lg-top">
+                    <div class="container">
+                        <div class="txt-underline">
+                            <h2 class="title-section">Our Services</h2>
+                        </div>
+                        <ServiceSlider />
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding-lg">
+                    <div class="container">
+                        <div class="wrapper-mission">
+                            <div class="title-bar">
+                                <div class="divider-bar-short"></div>
+                                <h2 class="title-lg txt-center txt-red no-margin">Contact Us</h2>
+                                <div class="divider-bar-short"></div>
+                            </div>
+                            <h3 class="title-section txt-center">Let's Get Started <br>On Your Project</h3>
+                            <div class="btn-center">
+                                <a href="/contact" class="btn-primary">Request an Estimate</a>
+                                <a href="/careers" class="btn-secondary black-btn">Work At Digs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </body>
+</html>

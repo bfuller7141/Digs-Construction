@@ -1,0 +1,10 @@
+{
+    "cssvar.files": ["public/styles/*.css"],
+    "cssvar.extensions": [
+        "css",
+        "scss",
+        "tsx",
+        "jsx",
+        "astro"
+    ]
+}

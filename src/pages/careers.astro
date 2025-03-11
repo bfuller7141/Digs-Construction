@@ -1,0 +1,56 @@
+---
+import ApplicationForm from "../components/ApplicationForm.astro";
+import BaseHead from "../components/BaseHead.astro";
+import SkipMain from "../components/buttons/SkipMain.astro";
+import Footer from "../components/Footer.astro";
+import NavMainDark from "../components/navigation/NavMain-Dark.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+        title="Construction Careers at Digs Construction | Build Your Future With Us"
+        description="Explore career opportunities at Digs Construction. Join our team of skilled professionals and grow in a rewarding construction career. Apply today!"
+        keywords="construction careers, Digs Construction jobs, general contractor jobs, construction employment, hiring construction workers, construction careers in Los Alamos"
+        url="https://digs.construction/careers"
+    />    
+    </head>
+    <body>
+        <SkipMain />
+        <header>
+            <NavMainDark />            
+        </header>
+        <main id="main">
+            <section id="top">
+                <div class="padding-xl-top">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="title-bar">
+                                <div class="divider-bar-short"></div>
+                                <h1 class="title-lg txt-center txt-red no-margin">Digs Jobs</h1>
+                                <div class="divider-bar-short"></div>
+                            </div>
+                            <h2 class="title-page txt-center">Join A Team Of <span class="highlight">Dedicated</span> Professionals</h2>
+                            <p class="body-md txt-center">
+                                Digs Construction is always looking for skilled, hardworking professionals to join our team. As an employee-owned company, we take pride in our work and invest in the success of every project. If you're interested in becoming part of a team that values expertise, accountability, and craftsmanship, download the application and upload it using the form below.                            </p>
+                            <div class="wrapper-btn btn-center">
+                                <a href="/downloads/Digs Employment Application.pdf" class="btn-primary" target="_blank">Download Application</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="padding-global">
+                    <div class="container">
+                        <ApplicationForm />
+                    </div>
+                </div>
+            </section>
+        </main>
+        <Footer />
+    </body>
+</html>

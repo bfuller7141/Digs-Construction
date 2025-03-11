@@ -1,0 +1,117 @@
+.footer {
+    background-image: url('/images/backgrounds/background-footer.webp');
+    background-size: cover;
+    background-position: center;
+    border-top: 0.5rem solid var(--black-500);
+}
+
+.padding-footer {
+    padding-top: var(--vert-lg);
+    padding-bottom: var(--vert-md);
+    padding-left: var(--horizontal);
+    padding-right: var(--horizontal);
+}
+
+.wrapper-footer {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    width: clamp(6rem, 20vw, 12rem);
+}
+
+.wrapper-footer-col {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+.list-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+}
+
+.list-footer li a {
+    font-family: var(--font-body);
+    font-size: var(--body-md);
+    font-weight: 600;
+    color: var(--white);
+    padding: 0;
+    text-decoration: none;
+}
+.list-footer li a:hover {
+    color: var(--black-200);
+}
+
+.footer-title {
+    font-family: var(--font-title);
+    font-size: var(--title-sm);
+    font-weight: 600;
+    color: var(--white);
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--full-white);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.legal-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.legal-links li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-links a {
+    font-family: var(--font-body);
+    font-size: var(--body-sm);
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+}
+.legal-links a:hover {
+    color: var(--black-200);
+}
+
+@media screen and (max-width: 985px) {
+    .wrapper-footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .wrapper-footer-col {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

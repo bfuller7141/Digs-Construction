@@ -1,0 +1,74 @@
+:root {
+/* Colors */
+    --red-200: #D7A5A6;
+    --red-300: #C4797A;
+    --red-400: #B04C4E;
+    --red-500: #9D2022;
+    --red-600: #821A1C;
+    --red-700: #681516;
+    --red-800: #4E1011;
+
+    --black-200: #9B9999;
+    --black-300: #696666;
+    --black-400: #373333;
+    --black-500: #060000;
+
+    --gray-200: #DBD7D4;
+    --gray-300: #C9C3BE;
+    --gray-400: #b5ada8;
+    --gray-500: #a39a93;
+    --gray-600: #88807a;
+    --gray-700: #6d6762;
+    --gray-800: #534e4c;
+
+    --tan-200: #eee6df;
+    --tan-300: #e7dacf;
+    --tan-400: #dfcebf;
+    --tan-500: #d8c3b0;
+    --tan-600: #b2a292;
+    --tan-700: #8e8175;
+    --tan-800: #6b6259;
+
+    --full-white: #ffffff;
+    --white: #F6F5F4;
+    --text: #323232;
+
+/* Fonts */
+    --font-title: 'Open Sans', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+/* Font Sizes */
+    --title-xxl: clamp(3.5rem, calc(1rem + 4vw), 6rem);
+    --title-xl: clamp(2.75rem, calc(1rem + 2.5vw), 4.75rem);
+    --title-lg: clamp(1.5rem, 2vw, 2rem);
+    --title-md: clamp(1.25rem, 1.5vw, 1.75rem);
+    --title-sm: clamp(1rem, 1.25vw, 1.5rem);
+    --title-xs: clamp(0.75rem, 1vw, 1.25rem);
+
+    --body-lg: clamp(1rem, 1.25vw, 1.5rem);
+    --body-md: clamp(0.875rem, 1vw, 1.25rem);
+    --body-sm: clamp(0.75rem, 0.875vw, 1rem);
+    --body-xs: clamp(0.625rem, 0.75vw, 0.875rem);
+
+/* Spacing */
+    --spacing-xl: 3rem;
+    --spacing-lg: 2rem;
+    --spacing-md: 1.5rem;
+    --spacing-sm: 1rem;
+    --spacing-xs: 0.5rem;
+
+/* Padding */
+    --vert-hero: clamp(5rem, 10vw, 10rem);
+    --vert-lg: clamp(3rem, 5vw, 5rem);
+    --vert-md: clamp(2.5rem, 3vw, 3.5rem);
+    --vert-sm: clamp(1rem, 2vw, 2rem);
+
+    --horizontal: clamp(1rem, 2vw, 4rem);
+
+    --vert-nav: 2rem;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--red-500);
+    outline-offset: 4px;
+}

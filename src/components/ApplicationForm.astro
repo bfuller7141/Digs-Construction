@@ -1,0 +1,152 @@
+<form id="job-application" class="form-wrap" action="/thank-you-app" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="return updateSubject()" name="Job Application">
+    <!-- Honey Pot -->
+     <div class="hidden" style="display: none;">
+        <label for="bot-field">Don’t fill this out if you're human:</label>
+        <input type="text" name="bot-field" id="bot-field" />
+     </div>
+
+     <!-- Subject Line -->
+     <input type="hidden" id="subject" name="subject" value="">
+
+    <div class="horizontal-group">
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" placeholder="John" required autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Doe" required autocomplete="family-name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="jdoe@email.com" required autocomplete="email" />
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="505-555-5555" required autocomplete="tel" />
+    </div>
+    <div class="horizontal-group">
+        <div class="form-group file-upload-group">
+            <div class="custom-file-input">
+                <input type="file" name="application" id="application" accept=".pdf,.doc,.docx" required />
+                <label for="application" class="btn-text-red">Upload Completed Application</label>
+                <span id="file-name">No file chosen</span>
+            </div>
+            <p class="body-sm text-gray">Accepted formats: .PDF, .DOC, .DOCX</p>
+        </div>
+        <div class="form-group file-upload-group">
+            <div class="custom-file-input">
+                <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" />
+                <label for="resume" class="btn-text-red">Upload A Resume (Optional)</label>
+                <span id="file-name">No file chosen</span>
+            </div>
+            <p class="body-sm text-gray">Accepted formats: .PDF, .DOC, .DOCX</p>
+        </div>
+    </div>
+    <div class="btn-wrapper">
+        <button type="submit" class="btn-primary btn-form">Submit Application</button>
+    </div>
+</form>
+
+<style>
+/* Form Wrapper */
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 80rem;
+    margin: var(--spacing-lg) auto;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Horizontal Form Layout */
+.horizontal-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+/* Input Fields */
+input, textarea {
+    font-family: var(--font-body);
+    font-size: var(--body-md);
+    padding: var(--spacing-xs);
+    border: 2px solid var(--gray-300);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+    width: 100%;
+}
+
+/* Input Focus */
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    outline: none;
+    border-color: var(--red-500);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button Wrapper */
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--spacing-lg);
+}
+
+/* Custom File Upload */
+.file-upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.custom-file-input {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+
+/* Hide Default File Input */
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+
+/* Display Selected File Name */
+#file-name {
+    font-family: var(--font-body);
+    font-size: var(--body-md);
+    color: var(--gray-500);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-wrap {
+        width: 100%;
+    }
+    .horizontal-group {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+</style>

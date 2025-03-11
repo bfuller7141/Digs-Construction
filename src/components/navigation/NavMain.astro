@@ -1,0 +1,86 @@
+<div class="nav-top">
+    <div class="container">
+      <div class="wrapper-nav-top">
+        <div class="title-xs txt-white hide-mobile">Proudly Serving Los Alamos Since 2005</div>
+        <ul class="nav-top-buttons" role="list" aria-label="Contact Options">
+          <li class="nav-top-button red hide-mobile">
+            <a href="mailto:contact@digs.construction">
+              <span>contact@digs.construction</span>
+            </a>
+          </li>
+          <li class="nav-top-button black">
+            <a href="tel:+15056636115">
+              <span>(505) 663-6115</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <nav class="nav-bottom" id="navBottom">
+    <div class="padding-nav">
+      <div class="container">
+        <div class="wrapper-nav">
+          <div class="logo">
+            <a href="/">
+              <img id="navLogo" src="/images/logo/logo-white.svg" alt="Digs Construction Logo" />
+            </a>
+          </div>
+          <ul class="nav-menu hide-mobile" role="list" aria-label="Main Navigation">
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/careers">Careers</a>
+            </li>
+          </ul>
+          <button class="hamburger hide-desktop" id="hamburger" aria-label="Toggle Menu">
+            <span class="hamburger-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close Menu">&times;</button>
+    <ul class="mobile-nav-menu" role="list" aria-label="Mobile Navigation">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/careers">Careers</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".nav-item");
+  const currentPage = window.location.pathname;
+
+  navItems.forEach((item) => {
+    const link = item.querySelector("a");
+    if (link.getAttribute("href") === currentPage) {
+      item.classList.add("active");
+    }
+  });
+});
+
+  </script>

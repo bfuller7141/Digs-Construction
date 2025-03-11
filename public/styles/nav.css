@@ -1,0 +1,306 @@
+@import 'styles/root.css';
+@import 'styles/styles.css';
+
+/* Nav Top */
+.nav-top {
+    width: 100%;
+    background-color: var(--red-500);
+    box-sizing: border-box;
+    padding-left: var(--horizontal);
+    padding-right: var(--horizontal);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.wrapper-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0;
+}
+
+.nav-top-buttons {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-top-button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-top-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 0 var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: var(--body-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.black {
+    background-color: var(--black-500);
+    transition: all 0.3s ease;
+}
+.black:hover {
+    background-color: var(--black-400);
+    transition: all 0.3s ease;
+}
+
+.red {
+    background-color: var(--red-500);
+    transition: all 0.3s ease;
+}
+.red:hover {
+    background-color: var(--red-400);
+    transition: all 0.3s ease;
+}
+
+/* Nav Bottom */
+
+.nav-bottom {
+    width: 100%;
+    background-color: none;
+    position: fixed;
+    top: 2.5rem;
+    left: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.nav-bottom.scrolled {
+    background-color: var(--white);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+/* Padding adjustments */
+.padding-nav {
+    padding-top: var(--vert-nav);
+    padding-bottom: var(--vert-nav);
+    padding-left: var(--horizontal);
+    padding-right: var(--horizontal);
+    transition: all 0.3s ease;
+}
+/* Reduce vertical padding when scrolled */
+.nav-bottom.scrolled .padding-nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Wrapper adjustments */
+.wrapper-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+/* Center items vertically on scroll */
+.nav-bottom.scrolled .wrapper-nav {
+    align-items: center;
+}
+
+/* Nav menu adjustments */
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;  /* Initially aligned to top */
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* Center nav links on scroll */
+.nav-bottom.scrolled .nav-menu {
+    align-items: center;
+}
+
+.nav-bottom .nav-item a {
+    padding: 0.25rem var(--spacing-sm);
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--body-md);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+.nav-item a:hover {
+    background-color: var(--red-500);
+    transition: all 0.3s ease;
+}
+
+.nav-bottom .nav-item.dark a {
+    color: var(--black-500);
+}
+.nav-bottom .nav-item.dark a:hover,
+.nav-bottom .nav-item.dark.active a {
+    background-color: var(--red-500);
+    color: var(--white);
+}
+.nav-bottom.scrolled .nav-item a {
+    color: var(--black-500);
+}
+.nav-bottom.scrolled .nav-item a:hover,
+.nav-bottom.scrolled .nav-item.active a {
+    background-color: var(--red-500);
+    color: var(--white);
+}
+
+.logo {
+    width: clamp(7rem, 10vw, 10rem);
+    margin: 0;
+}
+/* Shrink the logo on scroll */
+.nav-bottom.scrolled .logo {
+    width: clamp(5rem, 7vw, 7rem);
+}
+
+.nav-item a:hover,
+.nav-item.active a {
+    background-color: var(--red-500);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+/* When the nav is scrolled, apply active styles accordingly */
+.nav-bottom.scrolled .nav-item a:hover,
+.nav-bottom.scrolled .nav-item.active a {
+    background-color: var(--red-500);
+    color: var(--white);
+}
+
+
+.hamburger {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.hamburger-icon.dark,
+.hamburger-icon.dark::before,
+.hamburger-icon.dark::after {
+    background-color: var(--red-500);
+}
+
+/* Create two pseudo-elements for the top and bottom lines */
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+}
+
+.hamburger-icon::after {
+    top: 8px;
+    z-index: 1000;
+}
+
+/* When scrolled, change the hamburger icon color */
+.hamburger.scrolled .hamburger-icon,
+.hamburger.scrolled .hamburger-icon::before,
+.hamburger.scrolled .hamburger-icon::after {
+    background-color: var(--red-500);
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: none;  /* Hidden by default */
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.mobile-menu-overlay.open {
+    display: block;
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: var(--red-500);
+    position: absolute;
+    top: 2.5rem;
+    right: var(--horizontal);
+    cursor: pointer;
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 4rem 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-nav-menu .nav-item a {
+    display: block;
+    padding: 1rem 0;
+    font-family: var(--font-body);
+    font-size: var(--title-lg);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--black-500);
+}
+
+.hide-desktop {
+    display: none;
+}
+
+@media screen and (max-width: 615px) {
+    .hide-mobile {
+        display: none;
+    }
+    .hide-desktop {
+        display: flex;
+    }
+    .nav-top-button a {
+        font-size: var(--body-md);
+    }
+    .nav-top {
+        padding: 0;
+        height: auto;
+    }
+    .nav-top-buttons {
+        display: block;
+        width: 100%;
+    }
+    .wrapper-nav {
+        align-items: center;
+    }
+}
