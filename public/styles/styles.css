@@ -220,6 +220,9 @@ a:hover {
     justify-content: center;
     align-items: flex-start;
     background-image: url('/images/backgrounds/background-card.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 2rem;
     margin-right: -5rem;
     border-radius: 0.125rem;
