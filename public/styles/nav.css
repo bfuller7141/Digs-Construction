@@ -118,6 +118,7 @@
 /* Center items vertically on scroll */
 .nav-bottom.scrolled .wrapper-nav {
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* Nav menu adjustments */
